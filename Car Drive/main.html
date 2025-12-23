@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Drive</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; }
+        canvas { display: block; }
+        #distanceCounter {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        #startMessage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "./js/three.module.min.js",
+            "gltf": "./js/GLTFLoader.js",
+            "BufferGeometryUtils": "./utils/BufferGeometryUtils.js"
+        }
+    }
+    </script>
+    <script type="module" src="./js/drive.js" defer></script> 
+</head>
+<body>
+    <div id="distanceCounter">Distance: 0 m</div>
+    <div id="startMessage">Enter pour commencer le jeu</div>
+</body>
+</html>
